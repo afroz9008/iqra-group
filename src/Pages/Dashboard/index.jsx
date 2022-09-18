@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import classNames from "classnames";
 import { Container, Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   leftContainer: {
@@ -82,6 +83,14 @@ export default function Dashboard() {
     autoplaySpeed: 5000,
   };
   const classes = useStyles();
+
+  useEffect(() => {
+    axios.get('/home')
+      .then(res => {
+        console.log(res, 'response')
+      })
+      .catch(er => console.log(er))
+  })
 
   return (
     <>

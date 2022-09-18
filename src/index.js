@@ -10,7 +10,7 @@ import theme from "./Theme";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import './api/mocks/index'
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
